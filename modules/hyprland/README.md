@@ -1,2 +1,1 @@
 # nixos-dotfiles
-help
