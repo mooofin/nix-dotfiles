@@ -1,19 +1,77 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "mode": "dock",
+  "height": 32,
+❯ ls
+config  scripts  style.css
+❯  cat style.css
 * {
-  border: none;
-  font-family: sans-serif;
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
   font-size: 13px;
   min-height: 0;
+  border: none;
+  color: rgba(170,178,240,0.8); /* main-fg */
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
-  color: white;
-  border-radius: 10px;
-  padding: 0 10px;
+  background: rgba(31,33,48,0.8); /* main-bg */
+  border-radius: 12px;
+  margin: 6px;
+  padding: 4px 8px;
 }
 
-#clock, #cpu, #memory, #battery, #tray {
-  padding: 0 10px;
-  margin: 0 5px;
-  background-color: transparent;
+/* --- pill group styling --- */
+.modules-left,
+.modules-center,
+.modules-right,
+#group-pills {
+  background: transparent;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* pill button style */
+#workspaces button {
+  background-color: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  margin: 3px 6px;
+  padding: 4px 12px;
+  color: rgba(170,174,240,0.8); /* hover-fg */
+}
+
+#workspaces button.active {
+  background-color: rgba(154,152,169,0.4); /* wb-act-bg */
+  color: rgba(210,204,255,1);              /* wb-act-fg */
+}
+
+#workspaces button:hover {
+  background-color: rgba(75,81,125,0.4);   /* wb-hvr-bg */
+}
+
+/* pill module blocks */
+#clock,
+#memory,
+#cpu,
+#network,
+#pulseaudio,
+#pulseaudio.microphone,
+#backlight,
+#battery,
+#tray,
+#idle_inhibitor,
+#hyprland-window {
+  background-color: rgba(31,33,48,0.6); /* bar-bg or dimmed main-bg */
+  margin: 3px 6px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  transition: background 0.3s ease;
+}
+
+/* hover effect */
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover {
+  background-color: rgba(75,81,125,0.4); /* wb-hvr-bg */
 }
