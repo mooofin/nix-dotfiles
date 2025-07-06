@@ -1,33 +1,88 @@
 {
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "~/.config/fastfetch/images/nyarch.png",
+        "type": "kitty",
+        "height": 14,
+        "padding": {
+            "top": 1
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        "break",
+
+        // ── Hardware Section ──
+        {
+            "type": "custom",
+            "format": "\u001b[38;2;255;182;193m┌──────────────────────Hardware──────────────────────┐"
+        },
+        {
+❯ cat ~/.config/waybar
+cat: /home/muffin/.config/waybar: Is a directory
+❯ cd ~/.config/waybar
+❯ ls
+config  scripts  style.css
+❯ cat scripts
+cat: scripts: Is a directory
+❯ cat config
+{
   "layer": "top",
   "position": "bottom",
+  "mode": "dock",
+  "height": 32,
+  "exclusive": true,
+  "passthrough": false,
+  "reload_style_on_change": true,
 
-  "modules-left": ["clock"],
-  "modules-center": [],
-  "modules-right": ["cpu", "memory", "battery", "tray"],
-
-  "clock": {
-    "format": "{:%H:%M | %a, %d %b}",
-    "tooltip": true
+  "modules-left": [
+    "group/pill#left1",
+    "group/pill#left2"
+  ],
+  "group/pill#left1": {
+    "orientation": "inherit",
+    "modules": [
+      "hyprland/workspaces",
+      "hyprland/window"
+    ]
+  },
+  "group/pill#left2": {
+    "orientation": "inherit",
+    "modules": [
+      "idle_inhibitor",
+      "clock"
+    ]
   },
 
-  "cpu": {
-    "format": "CPU {usage:2}%",
-    "interval": 5
+  "modules-center": [
+    "group/pill#center"
+  ],
+  "group/pill#center": {
+    "orientation": "inherit",
+    "modules": [
+      "cpu",
+      "memory"
+    ]
   },
 
-  "memory": {
-    "format": "Mem {used:0.1f}G",
-    "interval": 5
+  "modules-right": [
+    "group/pill#right1",
+    "group/pill#right2"
+  ],
+  "group/pill#right1": {
+    "orientation": "inherit",
+    "modules": [
+      "network",
+      "pulseaudio",
+    ]
   },
-
-  "battery": {
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
-  },
-
-  "tray": {
-    "icon-size": 18,
-    "spacing": 10
+  "group/pill#right2": {
+    "orientation": "inherit",
+    "modules": [
+      "tray",
+      "battery"
+    ]
   }
 }
