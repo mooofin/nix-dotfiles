@@ -1,146 +1,73 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-	   "source": "~/.config/fastfetch/images/nyarch.png",
-	   "type": "kitty",
-	   "height": 14,
-	   "padding": {
-		   "top": 1
-	   }
+        "source": "~/.config/fastfetch/images/nyarch.png",
+        "type": "kitty",
+        "height": 14,
+        "padding": {
+            "top": 1
+        }
     },
     "display": {
         "separator": " "
     },
-"modules": [
+    "modules": [
         "break",
+
+        // ── Hardware Section ──
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
-        },
-        {
-            "type": "host",
-            "key": " PC",
-            "keyColor": "green"
+            "format": "\u001b[38;2;255;182;193m┌──────────────────────Hardware──────────────────────┐"
         },
         {
             "type": "cpu",
-            "key": "│ ├",
-            "keyColor": "green"
+            "key": "│ ├ CPU",
+            "keyColor": "#ffb6c1"
         },
         {
             "type": "gpu",
-            "key": "│ ├󰍛",
-            "keyColor": "green"
-        },
-        {
-            "type": "memory",
-            "key": "│ ├󰍛",
-            "keyColor": "green"
-        },
-        {
-            "type": "disk",
-            "key": "└ └",
-            "keyColor": "green"
+            "key": "│ ├󰍛 GPU",
+            "keyColor": "#ffb6c1"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+            "format": "\u001b[38;2;255;182;193m└────────────────────────────────────────────────────┘"
         },
+
         "break",
+
+        // ── Software Section ──
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+            "format": "\u001b[38;2;255;182;193m┌──────────────────────Software──────────────────────┐"
         },
         {
             "type": "os",
-            "key": " OS",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "kernel",
-            "key": "│ ├",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "bios",
-            "key": "│ ├",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "packages",
-            "key": "│ ├󰏖",
-            "keyColor": "yellow"
+            "key": "│ ├ OS",
+            "keyColor": "#ffb6c1"
         },
         {
             "type": "shell",
-            "key": "└ └",
-            "keyColor": "yellow"
-        },
-        "break",
-        {
-            "type": "de",
-            "key": " DE",
-            "keyColor": "blue"
-        },
-        {
-            "type": "lm",
-            "key": "│ ├",
-            "keyColor": "blue"
-        },
-        {
-            "type": "wm",
-            "key": "│ ├",
-            "keyColor": "blue"
-        },
-        {
-            "type": "wmtheme",
-            "key": "│ ├󰉼",
-            "keyColor": "blue"
+            "key": "│ ├ Shell",
+            "keyColor": "#ffb6c1"
         },
         {
             "type": "terminal",
-            "key": "└ └",
-            "keyColor": "blue"
+            "key": "└ └ Terminal",
+            "keyColor": "#ffb6c1"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+            "format": "\u001b[38;2;255;182;193m└────────────────────────────────────────────────────┘"
         },
+
         "break",
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌────────────────────Uptime / Age / DT────────────────────┐"
-        },
-        {
-            "type": "command",
-            "key": "  OS Age ",
-            "keyColor": "magenta",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
-        },
-        {
-            "type": "uptime",
-            "key": "  Uptime ",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "datetime",
-            "key": "  DateTime ",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└─────────────────────────────────────────────────────────┘"
-        },
 
-//        {
-//            "type": "colors"
-//        },
-
+        // ── Color blocks ──
         {
             "type": "colors",
             "paddingLeft": 2,
             "symbol": "circle"
         }
- 
     ]
 }
