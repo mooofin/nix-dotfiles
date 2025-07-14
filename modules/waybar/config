@@ -1,1 +1,71 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "mode": "dock",
+  "height": 32,
+  "exclusive": true,
+  "passthrough": false,
+  "reload_style_on_change": true,
 
+  "modules-left": [
+    "group/pill#left1",
+    "group/pill#left2"
+  ],
+
+  "group/pill#left1": {
+    "orientation": "inherit",
+    "modules": [
+      "hyprland/workspaces",
+      "hyprland/window"
+    ]
+  },
+
+  "group/pill#left2": {
+    "orientation": "inherit",
+    "modules": [
+      "idle_inhibitor",
+      "clock"
+    ]
+  },
+
+  "modules-center": [
+    "group/pill#center"
+  ],
+
+  "group/pill#center": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/lock",
+      "cpu",
+      "memory"
+    ]
+  },
+
+  "custom/lock": {
+    "format": "",
+    "tooltip": "Lock Screen",
+    "on-click": "hyprlock",
+    "interval": 0
+  },
+
+  "modules-right": [
+    "group/pill#right1",
+    "group/pill#right2"
+  ],
+
+  "group/pill#right1": {
+    "orientation": "inherit",
+    "modules": [
+      "network",
+      "pulseaudio"
+    ]
+  },
+
+  "group/pill#right2": {
+    "orientation": "inherit",
+    "modules": [
+      "tray",
+      "battery"
+    ]
+  }
+}
