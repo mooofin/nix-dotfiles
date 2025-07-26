@@ -45,10 +45,9 @@ nix-dotfiles/
 - Primary: `Iosevka`, `JetBrains Mono`, or `Fira Code`
 - Cursive overlay (optional): `Cedarville Cursive`, `EB Garamond`
 
+
 ---
-<img width="1916" height="1080" alt="screenshot-1753554497" src="https://github.com/user-attachments/assets/b0fa20eb-111e-4b03-8e22-3d5cd6667ace" />
-
-
+<img width="1410" height="768" alt="screenshot-1753556479" src="https://github.com/user-attachments/assets/6c7ee257-5873-49cf-bf84-b2ed860fd2d9" />
 
 ![WhatsApp Image 2025-07-26 at 3 56 40 PM](https://github.com/user-attachments/assets/6f0c8bb1-860c-4543-8b81-21734da65d07)
 
