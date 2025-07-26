@@ -49,13 +49,14 @@ nix-dotfiles/
 
 ##  Screenshots
 
+<img width="1920" height="1080" alt="screenshot-1753524851" src="https://github.com/user-attachments/assets/b4a54be9-e292-4bfe-b845-6ddba9adb6da" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f0b6679f-3a68-46e6-b0e8-0bf68c14c5a3" />
+
 
 
 ###Desktop Overview
 
-![desktop](screenshots/desktop-overview.png)
+
 
 - Waybar: pill layout with rounded modules, blurred background
 - Fastfetch: soft overlay with Lana image
