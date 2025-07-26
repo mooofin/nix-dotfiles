@@ -47,14 +47,14 @@ nix-dotfiles/
 
 ---
 
-##  Screenshots
-
-<img width="1920" height="1080" alt="screenshot-1753524851" src="https://github.com/user-attachments/assets/b4a54be9-e292-4bfe-b845-6ddba9adb6da" />
 
 
+![WhatsApp Image 2025-07-26 at 3 56 40 PM](https://github.com/user-attachments/assets/6f0c8bb1-860c-4543-8b81-21734da65d07)
 
 
-###Desktop Overview
+
+
+
 
 
 
