@@ -46,6 +46,7 @@ nix-dotfiles/
 - Cursive overlay (optional): `Cedarville Cursive`, `EB Garamond`
 
 ---
+<img width="1916" height="1080" alt="screenshot-1753554497" src="https://github.com/user-attachments/assets/b0fa20eb-111e-4b03-8e22-3d5cd6667ace" />
 
 
 
