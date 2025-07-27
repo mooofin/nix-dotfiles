@@ -47,12 +47,10 @@ nix-dotfiles/
 
 
 ---
-<img width="1410" height="768" alt="screenshot-1753556479" src="https://github.com/user-attachments/assets/6c7ee257-5873-49cf-bf84-b2ed860fd2d9" />
-
-![WhatsApp Image 2025-07-26 at 3 56 40 PM](https://github.com/user-attachments/assets/6f0c8bb1-860c-4543-8b81-21734da65d07)
 
 
 
+<img width="3277" height="763" alt="screenshot-1753628591" src="https://github.com/user-attachments/assets/d0a7f333-db2c-41e9-bd32-258010c3de77" />
 
 
 
