@@ -1,3 +1,4 @@
+
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -147,9 +148,7 @@
     pkgs.obsidian
     python3Full    
     python3Packages.tqdm
-    (ghidra.withExtensions (p: [
-      p.ret-sync
-    ]))
+    pkgs.binaryninja-free
     hyprpaper
     go 
     git
@@ -167,7 +166,8 @@
   burpsuite
   rustc
   cargo
- pkgs.pwntools
+  fzf
+   pkgs.hyprpaper
 
  ];
 
@@ -207,12 +207,13 @@
 
   
 
+programs.zsh.enable = true;
 
-# Enable Zsh shell
-  programs.zsh.enable = true;
-  environment.etc."zshenv".text = ''
-    export ZDOTDIR="$HOME/.config/zsh"
-  ''; 
+environment.etc."zshenv".text = ''
+  export ZDOTDIR="$HOME/.config/zsh"
+'';
+
+
 
 
 
