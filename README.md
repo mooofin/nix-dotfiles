@@ -52,6 +52,7 @@ nix-dotfiles/
 
 <img width="3277" height="763" alt="screenshot-1753628591" src="https://github.com/user-attachments/assets/d0a7f333-db2c-41e9-bd32-258010c3de77" />
 
+<img width="1392" height="767" alt="screenshot-1753949295" src="https://github.com/user-attachments/assets/3aec9cac-2067-425d-8dd4-5c7b5f3c5e6e" />
 
 
 
