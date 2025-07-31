@@ -54,6 +54,7 @@ nix-dotfiles/
 
 <img width="3286" height="768" alt="screenshot-1753957106" src="https://github.com/user-attachments/assets/5094cf63-4235-4ba9-a04b-a61fae8a9e87" />
 
+<img width="1881" height="1005" alt="screenshot-1753964934" src="https://github.com/user-attachments/assets/cf6e906e-f288-4131-99c0-a1aae7b79328" />
 
 
 - Waybar: pill layout with rounded modules, blurred background
