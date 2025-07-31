@@ -1,32 +1,30 @@
-
-
-### 📄 `README.md` for `nix-dotfiles`
-
 ```markdown
 # 🌸 nix-dotfiles
 
-> A modular, visually cohesive NixOS dotfiles setup built around a soft-glass, dreamlike aesthetic inspired by **Lana Del Rey**.  
-> Designed for **Hyprland** on **Wayland**, featuring seamless blur, pastel glow, custom audio visualization, and a curated user experience.
+>cozy haven of seamless blurs, delicate pastel glows
 
 ```
 ##  Directory Structure
 
-
 ```
 nix-dotfiles/
 ├── modules/
-│   ├── cava/           # Audio visualizer configuration
-│   ├── drun/           # Rofi launcher (themed config.rasi)
-│   ├── fastfetch/      # Terminal fetch w/ image preview (Lana.jpg)
-│   ├── hyprland/
-│   │   ├── hyprlock/   # Lock screen w/ blur and glow
-│   │   ├── waybar/     # Optional hyprlock-specific waybar
-│   │   ├── README.md
-│   │   └── hyprland.conf
-│   └── waybar/         # Main system-wide Waybar config
-└── flake.nix (soon)
-
+│   ├── btcup/          
+│   ├── cava/          
+│   ├── drun/           
+│   ├── fastfetch/     
+│   ├── fish/           
+│   ├── hyprland/       
+│   │   ├── hyprlock/   
+│   │   ├── waybar/     
+│   │   ├── README.md   
+│   │   └── hyprland.conf 
+│   ├── kitty/          
+│   ├── waybar/        
+│   └── waypaper/      
+└── flake.nix (soon)    
 ```
+
 
 ---
 
@@ -52,7 +50,7 @@ nix-dotfiles/
 
 <img width="3277" height="763" alt="screenshot-1753628591" src="https://github.com/user-attachments/assets/d0a7f333-db2c-41e9-bd32-258010c3de77" />
 
-<img width="1392" height="767" alt="screenshot-1753949295" src="https://github.com/user-attachments/assets/3aec9cac-2067-425d-8dd4-5c7b5f3c5e6e" />
+
 
 <img width="3286" height="768" alt="screenshot-1753957106" src="https://github.com/user-attachments/assets/5094cf63-4235-4ba9-a04b-a61fae8a9e87" />
 
