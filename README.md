@@ -1,3 +1,5 @@
+(quickshell when .. ) 
+
 ```markdown
 # 🌸 nix-dotfiles
 
