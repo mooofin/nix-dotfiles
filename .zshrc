@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-
+#stolen from magniquick 
 # Based on https://github.com/romkatv/zsh-bench/blob/master/configs/diy%2B%2Bfsyh/skel/.zshrc, with additional modifications.
 
 # make paths unique
