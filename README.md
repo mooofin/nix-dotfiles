@@ -154,6 +154,12 @@ You can either **copy the modules manually** or **use Nix Home Manager / flakes*
   - **Waybar Layout**: To change the order or content of your Waybar, simply edit the `modules-left`, `modules-center`, and `modules-right` arrays in `waybar/config`.
 
 -----
+
+<img width="1920" height="1076" alt="screenshot-1754558175" src="https://github.com/user-attachments/assets/fc3ad18b-f906-46cc-9135-b778f58283f6" />
+
+
+
+
 <img width="3277" height="763" alt="screenshot-1753628591" src="https://github.com/user-attachments/assets/d0a7f333-db2c-41e9-bd32-258010c3de77" />
 
 
