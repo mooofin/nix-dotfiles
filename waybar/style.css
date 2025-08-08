@@ -1,11 +1,3 @@
-{
-  "layer": "top",
-  "position": "bottom",
-  "mode": "dock",
-  "height": 32,
-❯ ls
-config  scripts  style.css
-❯  cat style.css
 * {
   font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
   font-size: 13px;
