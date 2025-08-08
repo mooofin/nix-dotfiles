@@ -1,6 +1,5 @@
-```nix
-# This file defines what should be installed on your system.
-# Help is available in the configuration.nix(5) man page
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
@@ -10,20 +9,20 @@
     ./hardware-configuration.nix
   ];
 
-  # Use the latest stable release of NixOS.
-  system.stateVersion = "24.05";
+  system.stateVersion = "25.05";
 
-  # --- Bootloader ---
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # --- Hostname and Networking ---
+  # Hostname and networking
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
-  # --- Time zone and Locale ---
+  # Time zone
   time.timeZone = "Asia/Kolkata";
 
+  # Locale
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocales = [ "en_US.UTF-8/UTF-8" "en_IN/UTF-8" ];
@@ -40,44 +39,48 @@
     };
   };
 
-  # --- Keyboard Layout ---
+  # Keyboard layout
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  # --- Flake and nix-ld configuration ---
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  programs.nix-ld.enable = true;
+  #fonts
+  
+  fonts = {
+    packages = with pkgs; [
+      pkgs.nerd-fonts.jetbrains-mono	
+      font-awesome
+    ];
+  }; 
+	
 
-  # --- Graphics and Display Manager ---
+
+  # Enable X11 and SDDM display manager
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
+
+  # Auto-login
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "muffin";
 
-  # --- Window Manager ---
+  # Enable Hyprland window manager
   programs.hyprland.enable = true;
 
-  # --- Audio ---
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # jack.enable = true;
-  };
+  # Printing
+  services.printing.enable = true;
 
-  # --- Bluetooth ---
+  # Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # nix-ld
+  programs.nix-ld.enable = true;
+
+  # Bluetooth support
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  # --- Printing ---
-  services.printing.enable = true;
-
-  # --- User Accounts ---
+  # User account
   users.users.muffin = {
     isNormalUser = true;
     description = "muffin";
@@ -85,97 +88,81 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       kdePackages.kate
-      # thunderbird
     ];
   };
 
-  # --- Package Management ---
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # --- Program Settings ---
+  # Enable Firefox
   programs.firefox.enable = true;
-  programs.zsh.enable = true;
-  environment.etc."zshenv".text = ''
-    export ZDOTDIR="$HOME/.config/zsh"
-  '';
 
-  # --- System Packages ---
+  # System packages
   environment.systemPackages = with pkgs; [
-    # Terminal and Shell
-    zsh
-    fish
     kitty
+    waybar
+    wofi
+    swww
+    brightnessctl
+    pamixer
+    playerctl
+    wl-clipboard
+    pavucontrol
+    networkmanager
     fastfetch
     cmatrix
     btop
-    unzip
-    git
-    git
-    zoxide
-    fzf
-    # Hyprland and Wayland Tools
-    waybar
-    wofi
-    rofi
-    rofi-wayland
-    swww
-    swaylock
-    hyprlock
-    hypridle
-    hyprpaper
-    waypaper
+    vscode
+    discord
+    spotify
     grim
     slurp
-    swappy
-    wl-clipboard
-    # File Management
-    xfce.thunar
+    capitaine-cursors
+    pkgs.nemo
     xfce.tumbler
-    # Audio and Bluetooth
-    pavucontrol
-    pamixer
-    playerctl
-    cava
+    pipes
+    hyprlock
+    hypridle
     bluetuith
     bluez
     bluez-tools
     blueman
-    # System Utilities
-    brightnessctl
-    ddcutil
-    lm_sensors
+    cava
     wget
-    libqalculate
-    # Applications
-    vscode
-    discord
-    spotify
+    rofi
+    unzip
+    zoxide
+    rofi-wayland
+    waypaper
+    pkgs.libsForQt5.okular
+
     obsidian
+    python3Full
     binaryninja-free
-    ghidra
-    burpsuite
-    # Programming
-    rustc
-    cargo
+    hyprpaper
+    git
     gcc
     gnumake
-    python3Full
-    python3Packages.tqdm
-    # Visuals and Themes
-    capitaine-cursors
-    material-symbols
-    # Other
-    pipes
+    ddcutil
+    vim
+    lm_sensors
+    fish
     aubio
     qt6.qtdeclarative
+    material-symbols
+    swappy
+    libqalculate
+    burpsuite
+    rustc
+    swaylock
+    cargo
+    fzf
+    ghidra
+    
   ];
-
-  # --- Final Configuration ---
-  # This value determines the NixOS release from which the default
-  # settings for stateful data were taken.
-  # It's recommended to leave this value at the release version of the
-  # first install of this system.
-  # Before changing this value, read the documentation for this option.
-  system.stateVersion = "25.05";
+  
+  programs.zsh.enable = true;
+  environment.etc."zshenv".text = ''
+    export ZDOTDIR="$HOME/.config/zsh"
+  '';
 }
-```
