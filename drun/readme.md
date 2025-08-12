@@ -1,6 +1,8 @@
 # My Rofi Configuration (README Template)
 
 This document serves as a comprehensive guide to my Rofi configuration. It's designed for users who want to not only copy my settings but also understand the function of each component, enabling them to confidently customize the setup to their liking.
+
+
 credits - Aditya Shakya : 3
 -----
 
