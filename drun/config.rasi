@@ -1,17 +1,7 @@
 configuration {
-    modi: "drun,run";
     show-icons: true;
-
-    display-ssh:    "󰣀 ssh:";
-    display-run:    "󱓞 run:";
-    display-drun:   "󰣖 drun:";
-    display-window: "󱂬 window:";
-    display-combi:  "󰕘 combi:";
-    display-filebrowser: "󰉋 filebrowser:";
+    terminal: "kitty";
+    kb-cancel: "Escape,Control+g,Control+bracketleft";
+    click-to-exit: true;
+    case-sensitive: false;
 }
-
-//@theme "~/.config/rofi/themes/woofi.rasi"
-
-//@theme "/home/muffin/.config/rofi/themes/woofi.rasi"
-
-@theme "/nix/store/1f44g3f0g4xcnbhg1p56lmb5hmzw2w4h-rofi-1.7.9/share/rofi/themes/fullscreen-preview.rasi
