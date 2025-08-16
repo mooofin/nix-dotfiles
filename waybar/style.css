@@ -3,11 +3,11 @@
   font-size: 13px;
   min-height: 0;
   border: none;
-  color: rgba(170,178,240,0.8); /* main-fg */
+  color: rgba(220,120,120,0.85); /* main-fg (soft red) */
 }
 
 window#waybar {
-  background: rgba(31,33,48,0.8); /* main-bg */
+  background: rgba(40,10,15,0.85); /* main-bg (dark red base) */
   border-radius: 12px;
   margin: 6px;
   padding: 4px 8px;
@@ -25,20 +25,20 @@ window#waybar {
 
 /* pill button style */
 #workspaces button {
-  background-color: rgba(255,255,255,0.08);
+  background-color: rgba(120,20,30,0.25); /* pill-bg */
   border-radius: 16px;
   margin: 3px 6px;
   padding: 4px 12px;
-  color: rgba(170,174,240,0.8); /* hover-fg */
+  color: rgba(230,180,180,0.85); /* hover-fg (light red) */
 }
 
 #workspaces button.active {
-  background-color: rgba(154,152,169,0.4); /* wb-act-bg */
-  color: rgba(210,204,255,1);              /* wb-act-fg */
+  background-color: rgba(160,30,40,0.45); /* wb-act-bg */
+  color: rgba(255,200,200,1);             /* wb-act-fg */
 }
 
 #workspaces button:hover {
-  background-color: rgba(75,81,125,0.4);   /* wb-hvr-bg */
+  background-color: rgba(180,50,60,0.5);  /* wb-hvr-bg */
 }
 
 /* pill module blocks */
@@ -53,7 +53,7 @@ window#waybar {
 #tray,
 #idle_inhibitor,
 #hyprland-window {
-  background-color: rgba(31,33,48,0.6); /* bar-bg or dimmed main-bg */
+  background-color: rgba(50,15,20,0.65); /* bar-bg (dim dark red) */
   margin: 3px 6px;
   padding: 4px 12px;
   border-radius: 16px;
@@ -65,5 +65,5 @@ window#waybar {
 #network:hover,
 #pulseaudio:hover,
 #battery:hover {
-  background-color: rgba(75,81,125,0.4); /* wb-hvr-bg */
+  background-color: rgba(180,50,60,0.5); /* wb-hvr-bg */
 }
