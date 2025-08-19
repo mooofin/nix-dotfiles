@@ -1,45 +1,53 @@
-  GNU nano 8.4                        /home/muffin/.config/cava/config                                  
+# -------------------------
+# Cava Configuration
+# -------------------------
+
 [input]
-method = pulse
-source = auto
+# How Cava receives audio data.
+method = pulse        # Use PulseAudio as the source (standard on most Linux desktops).
+source = auto         # Automatically detect the default sound output.
 
 [output]
-method = ncurses
-channels = stereo
-
+# How the visualizer is drawn.
+method = ncurses      # Use ncurses to render inside the terminal.
 
 [color]
-background = 'default'
-gradient = 1
-gradient_color_1 = '#8bd5ca'
-gradient_color_2 = '#91d7e3'
-gradient_color_3 = '#7dc4e4'
-gradient_color_4 = '#8aadf4'
-gradient_color_5 = '#c6a0f6'
-gradient_color_6 = '#f5bde6'
-gradient_color_7 = '#ee99a0'
-gradient_color_8 = '#ed8796'
+# Customize the look of your visualizer.
+background = 'default'  # Use the terminal's background color.
+gradient = 1            # Enable gradient mode.
+gradient_color_1 = '#ff6666'  ; light blood red
+gradient_color_2 = '#ff4d4d'  ; fresh blood
+gradient_color_3 = '#ff3333'  ; cherry red
+gradient_color_4 = '#ff1a1a'  ; arterial bright red
+gradient_color_5 = '#ff8080'  ; soft rose red
+gradient_color_6 = '#ff9999'  ; pastel red
+gradient_color_7 = '#ffb3b3'  ; pale crimson
+gradient_color_8 = '#ff6666'  ; loops back for balance
 
 [general]
-framerate = 60
-bars = 80
-autosens = 1
-lower_cutoff_freq = 50
-higher_cutoff_freq = 10000
+# General behavior of the visualizer.
+framerate = 60          # Frames per second (smoother animations at higher values).
+bars = 80               # Number of bars in the visualizer.
+autosens = 1            # Automatic sensitivity adjustment.
+lower_cutoff_freq = 50  # Lower frequency limit (Hz).
+higher_cutoff_freq = 10000  # Upper frequency limit (Hz).
 
 [smoothing]
-integral = 85
-gravity = 100
-noise_reduction = 77
+# Smooths the bar movements so they’re less jumpy.
+integral = 70          # Influence of previous values (higher = smoother).
+gravity = 100          # How quickly bars fall back down after peaks.
+noise_reduction = 77   # Filters out small fluctuations for stability.
 
 [eq]
+# Equalizer for boosting/cutting certain frequency ranges.
 1 = 1.3
 2 = 1.2
 3 = 1.1
 4 = 1.0
 5 = 1.0
 6 = 1.0
-7 = 1.1
-8 = 1.2
-9 = 1.3
+7 = 1.0
+8 = 1.1
+9 = 1.2
 10 = 1.3
+# This "smiley curve" boosts lows and highs slightly for a more pleasing effect.
