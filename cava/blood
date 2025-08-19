@@ -1,0 +1,11 @@
+[color]
+gradient = 1
+
+gradient_color_1 = '#ff6666'  ; light blood red
+gradient_color_2 = '#ff4d4d'  ; fresh blood
+gradient_color_3 = '#ff3333'  ; cherry red
+gradient_color_4 = '#ff1a1a'  ; arterial bright red
+gradient_color_5 = '#ff8080'  ; soft rose red
+gradient_color_6 = '#ff9999'  ; pastel red
+gradient_color_7 = '#ffb3b3'  ; pale crimson
+gradient_color_8 = '#ff6666'  ; loop back for balance
