@@ -130,6 +130,7 @@
     cava
     wget
     rofi
+	pkgs.clock-rs
     unzip
     zoxide
     rofi-wayland
