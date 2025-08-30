@@ -38,8 +38,5 @@ The configuration is broken down into logical sections to make it easy to unders
 
 1.  **Prerequisites**: Make sure you have the following packages installed on your system: `hyprland`, `waybar`, `rofi`, `kitty`, `thunar`, `dunst`, `swww`, `grim`, `slurp`.
 2.  **Clone the Repo**:
-    ```bash
-    git clone https://github.com/your-username/your-repo.git ~/.config/hyprland-dotfiles
-    ```
 3.  **Symlink Configuration Files**: Create symbolic links from the cloned repository to your `~/.config` directory to apply the settings.
 4.  **Start Hyprland**: Log out and select the Hyprland session from your display manager (like SDDM) or run `Hyprland` from a TTY.
