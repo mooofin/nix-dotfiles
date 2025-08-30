@@ -133,7 +133,7 @@ You can either **copy the modules manually** or **use Nix Home Manager / flakes*
 
     ```bash
     # Clone the repo
-    git clone https://github.com/your-username/nix-dotfiles ~/.config/nix-dotfiles
+    git clone https://github.com/mooofin/nix-dotfiles
 
     # Create symlinks for each configuration file
     ln -s ~/.config/nix-dotfiles/hyprland/hyprland.conf ~/.config/hypr/hyprland.conf
