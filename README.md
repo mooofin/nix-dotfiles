@@ -153,8 +153,10 @@ You can either **copy the modules manually** or **use Nix Home Manager / flakes*
   - **Fonts**: The primary fonts for Kitty and Waybar can be changed by editing the `font_family` in their respective configuration files.
   - **Waybar Layout**: To change the order or content of your Waybar, simply edit the `modules-left`, `modules-center`, and `modules-right` arrays in `waybar/config`.
 
+
 -----
 
+<img width="1920" height="1080" alt="screenshot-1757228765" src="https://github.com/user-attachments/assets/587793b6-564a-4ec2-8966-e7db45d82a98" />
 
 <img width="1918" height="1080" alt="screenshot-1756543731" src="https://github.com/user-attachments/assets/31743dbe-d147-4467-ad07-2829b3ce9cb6" />
 
