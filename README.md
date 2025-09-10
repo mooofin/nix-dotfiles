@@ -155,6 +155,10 @@ You can either **copy the modules manually** or **use Nix Home Manager / flakes*
 
 
 -----
+<img width="1920" height="1080" alt="screenshot-1757526079" src="https://github.com/user-attachments/assets/3f24de7e-8245-45fd-a9d2-7539cb045895" />
+
+
+
 
 <img width="1920" height="1080" alt="screenshot-1757228765" src="https://github.com/user-attachments/assets/587793b6-564a-4ec2-8966-e7db45d82a98" />
 
