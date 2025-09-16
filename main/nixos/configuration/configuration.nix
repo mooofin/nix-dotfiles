@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, libs,inputs,system,... }:
 
 {
   imports = [
@@ -100,17 +100,23 @@
   # System packages
   environment.systemPackages = with pkgs; [
     kitty
+    neovim
+    pkgs.code-cursor
     waybar
+
+    vlc
     wofi
     swww
     brightnessctl
+    pkgs.yazi
     pamixer
     playerctl
+    inputs.caelestia-shell.packages.${system}.with-cli
     wl-clipboard
-    pavucontrol
-    networkmanager
+   pavucontrol
+  networkmanager
     fastfetch
-    cmatrix
+    pkgs.unimatrix
     btop
     vscode
     discord
@@ -130,22 +136,21 @@
     cava
     wget
     rofi
-	pkgs.clock-rs
     unzip
     zoxide
-    rofi-wayland
+    rofi
     waypaper
-    pkgs.libsForQt5.okular
-
     obsidian
-    python3Full
+    python3
+    pkgs.sfml
     binaryninja-free
     hyprpaper
     git
+    pkgs.nodejs_24
+    pkgs.mpvpaper
     gcc
     gnumake
     ddcutil
-    vim
     lm_sensors
     fish
     aubio
@@ -157,13 +162,24 @@
     rustc
     swaylock
     cargo
+    pkgs.clock-rs		
     fzf
     ghidra
     
   ];
-  
+
   programs.zsh.enable = true;
+
   environment.etc."zshenv".text = ''
+
     export ZDOTDIR="$HOME/.config/zsh"
+
   '';
+ programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+  };
+
+
 }
