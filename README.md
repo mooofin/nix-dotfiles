@@ -20,9 +20,15 @@ Expect things to break — please **don’t clone or rely on this yet**.
 
 
 -----
-<img width="1920" height="1080" alt="screenshot-1757526079" src="https://github.com/user-attachments/assets/3f24de7e-8245-45fd-a9d2-7539cb045895" />
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4793d434-a22b-4053-baed-154d38628262" />
+<img width="1920" height="1080" alt="screenshot_1759069642" src="https://github.com/user-attachments/assets/b0acaef3-12da-4114-9763-f364805d1819" />
+
+
+
+
+
+
+
 
 
 <img width="1920" height="1080" alt="screenshot-1757228765" src="https://github.com/user-attachments/assets/587793b6-564a-4ec2-8966-e7db45d82a98" />
