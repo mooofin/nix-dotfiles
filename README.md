@@ -4,7 +4,7 @@
 *this dotfiles setup is still under heavy development*  
 
 I’m currently  integrating **QuickShell** into **Home Manager**.  
-Expect things to break — please **don’t clone or rely on this yet**.  
+Expect things to break ,  please **don’t clone or rely on this yet**.  
 
 ---
 
