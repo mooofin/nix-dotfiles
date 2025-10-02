@@ -5,111 +5,290 @@
 <img width="704" height="408" alt="screenshot-1759388263" src="https://github.com/user-attachments/assets/fc396ae8-3fd5-49e7-b6dd-111cbe54a1dd" />
 
 
+# 🌸 Fastfetch Hyprland Aesthetic Config Tutorial
 
 
 
+Fastfetch is a modern replacement for Neofetch — it’s **faster**, **more customizable**, and uses **JSON configs**.
+This tutorial shows how to build and personalize your own **Hyprland-themed Fastfetch**, like the config you shared.
 
+---
 
-Tired of the same old terminal? Want to add a personal touch that showcases your setup? Fastfetch is a command-line tool that displays system information in a fast and beautiful way, and with a simple configuration file, you can transform your terminal into a personalized work of art.
+##  Step 1: Install Fastfetch
 
-This guide will walk you through how to configure Fastfetch, using a real-world example to show you just how easy it is to customize.
+On **NixOS**:
 
------
+```bash
+nix-env -iA nixos.fastfetch
+```
 
-### Understanding the Fastfetch Configuration
+or add it to your `home.packages` in Home Manager:
 
-The heart of Fastfetch's customization is its `config.jsonc` file, typically found in `~/.config/fastfetch/`. This file is where you define every aspect of your Fastfetch output, from the logo to the system information displayed.
+```nix
+home.packages = [ pkgs.fastfetch ];
+```
 
-Let's break down an example configuration to see what each section does.
+---
 
-```json
+##  Step 2: Create Config Directory
 
-{
-    "logo": {
-        "source": "/home/muffin/Downloads/lana.gif",
-        "type": "kitty-icat",
-        "height": 10,
-        "width": 20,
-        "padding": {
-            "top": 2
-        }
-    },
-    "modules": [
-        "break",
-        {
-            "type": "title",
-            "keyWidth": 10
-        },
-        "break",
-        {
-            "type": "os",
-            "key": " ",
-            "keyColor": "34"
-        },
-        // ... (other modules)
-    ]
+Fastfetch reads from `~/.config/fastfetch/config.jsonc`.
+
+Create it:
+
+```bash
+mkdir -p ~/.config/fastfetch
+```
+
+Copy your config file there:
+
+```bash
+nano ~/.config/fastfetch/config.jsonc
+```
+
+Paste your config (the one you posted).
+
+---
+
+##  Step 3: Understand the Config
+
+We’ll go section by section.
+
+###  1. **Schema and Header**
+
+```jsonc
+"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json"
+```
+
+This line just provides **autocompletion** and **validation** if you use an editor like VS Code.
+
+---
+
+### 2. **Logo Settings**
+
+```jsonc
+"logo": {
+  "source": "~/.local/share/fastfetch/images/hypr.png",
+  "type": "kitty",
+  "height": 18,
+  "padding": { "top": 2 }
+},
+```
+
+ **What it does:**
+
+* Displays an **image logo** (PNG) using **Kitty’s graphics protocol**.
+* You can use **any image**:
+
+  ```bash
+  mkdir -p ~/.local/share/fastfetch/images
+  cp your-image.png ~/.local/share/fastfetch/images/hypr.png
+  ```
+* Change `height` to scale it.
+* Adjust `padding.top` to control vertical spacing.
+
+ Tip: Works only in **Kitty**, **WezTerm**, or **foot** terminals that support inline images.
+
+---
+
+###  3. **Display Settings**
+
+```jsonc
+"display": {
+  "separator": " "
 }
 ```
 
-#### The `logo` Section
+* Controls spacing between **keys** and **values** in output.
+* You can change it to `:` or `→` or anything aesthetic.
 
-This is where the magic happens. The `logo` block defines the image or ASCII art that appears next to your system information.
+---
 
-  * `source`: The absolute path to your image file. Fastfetch can handle a variety of formats, including PNGs, JPGs, and even GIFs\!
-  * `type`: This specifies the terminal image protocol. `kitty-icat` is an excellent choice for terminals like Kitty that support high-quality image rendering.
-  * `height` & `width`: These values control the size of your image in terminal "character cells." Experiment with these to get the perfect fit.
-  * `padding`: Adds space around the logo. In this example, `padding.top` is used to align the logo with the first line of text.
+###  4. **Modules**
 
-#### The `modules` Array
+This is where the **main info** appears. It’s an **array** that runs in order.
 
-The `modules` array is a list of all the system information you want to display. Each item in the array is a module.
+You can insert:
 
-  * `"break"`: A simple but powerful module that inserts a new line, perfect for spacing out your information.
-  * `"title"`: This displays your user and hostname, like `muffin@Hyprland`.
-  * `"os"`, `"shell"`, `"terminal"`, `"wm"`: These are just a few examples of the many built-in modules. They automatically fetch and display details about your operating system, shell, terminal emulator, and window manager.
-  * `"key"`: The text or icon that appears before the module's output. The icons you see (``, ``) are from **Nerd Fonts**. To display these correctly, you must have a Nerd Font installed and enabled in your terminal.
-  * `"keyColor"`: Sets the color of the key/icon using a simple ANSI color code.
+* `"break"` to add line breaks
+* **modules** with `type`
+* **custom** sections for colors or text
 
------
+####  Color Line
 
-### Step-by-Step Customization Guide
+```jsonc
+{
+  "type": "custom",
+  "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m"
+}
+```
 
-Ready to make it your own? Follow these steps.
+This prints little colored circles like a **palette divider**.
+You can change colors or symbols (e.g. ``, ``).
 
-1.  **Find or Create the Configuration File:** If you don't have one, create a file at `~/.config/fastfetch/config.jsonc` and paste the example configuration above as a starting point.
+####  System Info Modules
 
-2.  **Change the Logo:**
+Each block looks like:
 
-      * Replace the `source` path with the path to your desired image or GIF. You can also use `type: "chafa"` for a terminal-based ASCII art logo.
-      * Adjust the `height` and `width` to your liking.
+```jsonc
+{
+  "type": "os",
+  "key": " ",
+  "keyColor": "34"
+},
+```
 
-3.  **Add or Remove Modules:**
+Breakdown:
 
-      * To add a new module, simply add a new object to the `modules` array. For example, to add CPU and memory information, you would add:
-        ```json
-        {
-            "type": "cpu",
-            "key": " ",
-            "keyColor": "34"
-        },
-        {
-            "type": "memory",
-            "key": "orie",
-            "keyColor": "34"
-        }
-        ```
-      * To see a full list of available modules, run `fastfetch --help`.
-      * To remove a module, just delete its block from the `modules` array.
+* `type`: Which info to display (`os`, `kernel`, `shell`, `packages`, etc.)
+* `key`: Icon or text label before the value
+* `keyColor`: ANSI color code (34 = blue)
 
-4.  **Change Icons and Colors:**
+ **Color codes:**
 
-      * Find new icons at a site like [Nerd Fonts](https://www.nerdfonts.com/cheat-sheet). Copy the icon and paste it into the `"key"` field.
-      * Change the `"keyColor"` to a different ANSI code or a hex color code if your terminal supports it.
+| Code | Color   |
+| ---- | ------- |
+| 31   | Red     |
+| 32   | Green   |
+| 33   | Yellow  |
+| 34   | Blue    |
+| 35   | Magenta |
+| 36   | Cyan    |
+| 37   | White   |
+| 90   | Gray    |
 
-5.  **Save and Run:** Save the `config.jsonc` file. The next time you run `fastfetch` in your terminal, your new configuration will be applied automatically\!
+You can make your own palette by changing `keyColor`.
 
------
+---
 
-### The Final Word
+####  Example Modules Explained:
 
-Fastfetch is a powerful yet easy-to-use tool for personalizing your terminal. By understanding the basic structure of its configuration file, you can create a unique and visually appealing setup that is truly your own. Don't be afraid to experiment with different images, modules, and colors—your ideal terminal is just a few keystrokes away.
+```jsonc
+{
+  "type": "packages",
+  "format": "{} (Nixpkg)",
+  "key": " ",
+  "keyColor": "34"
+}
+```
+
+ Shows package count, adds custom text “(Nixpkg)”.
+
+```jsonc
+{
+  "type": "datetime",
+  "format": "{1}-{3}-{11}",
+  "key": " ",
+  "keyColor": "34"
+}
+```
+
+ Shows date/time using placeholders:
+
+* `{1}` = Year
+* `{3}` = Day
+* `{11}` = Time (HH:MM)
+
+You can modify to:
+
+```jsonc
+"format": "{3}/{2}/{1} {11}"
+```
+
+```jsonc
+{
+  "type": "media",
+  "key": "󰝚 ",
+  "keyColor": "34"
+},
+{
+  "type": "player",
+  "key": " ",
+  "keyColor": "34"
+}
+```
+
+ Shows current **media info** and **player** (Spotify, mpv, etc.)
+
+---
+
+#### Extra Dividers
+
+You used multiple `"break"` and color lines to give breathing room.
+That’s good for **aesthetic balance**.
+
+You can add custom text:
+
+```jsonc
+{
+  "type": "custom",
+  "format": "\u001b[35m~ crafted by Bina ~"
+}
+```
+
+---
+
+##  Step 4: Run and Test
+
+Run Fastfetch:
+
+```bash
+fastfetch
+```
+
+If you want to always see this when opening a terminal, add to your shell rc:
+
+For **bash**:
+
+```bash
+echo "fastfetch" >> ~/.bashrc
+```
+
+For **zsh**:
+
+```bash
+echo "fastfetch" >> ~/.zshrc
+```
+
+---
+
+##  Step 5: Customization Ideas
+
+ Try these:
+
+* Change **logo**: use `type: ascii` with an ASCII Hyprland logo if your terminal doesn’t support images.
+* Add **GPU**, **CPU**, **Memory**, **Battery** modules:
+
+```jsonc
+{ "type": "cpu", "key": " ", "keyColor": "34" },
+{ "type": "gpu", "key": "󰍛 ", "keyColor": "34" },
+{ "type": "memory", "key": " ", "keyColor": "34" },
+{ "type": "battery", "key": " ", "keyColor": "34" }
+```
+
+* Change colors to match your **Hyprland theme** (pastel pinks, muted blues, dreamy vibes).
+* Add **custom text** like:
+
+```jsonc
+{
+  "type": "custom",
+  "format": "\u001b[35mA black-magic-practicing NixOS witch 🧙"
+}
+```
+
+---
+
+##  Final Touch
+
+You can keep iterating:
+
+* Match the **colors** to your **Hyprland wallpaper**.
+* Use **soft pink, violet, cyan** for a dreamy, glassy look.
+* Add quotes or taglines like:
+
+```jsonc
+{ "type": "custom", "format": "\u001b[36m“I fucking love NixOS.”" }
+```
+
+---
+
