@@ -1,65 +1,98 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": null,
+    "logo": {
+    	"source": "~/.local/share/fastfetch/images/hypr.png",
+    	"type": "kitty",
+    	"height": 18,
+    	"padding": {
+    		"top": 2
+    	}
+    },
     "display": {
-        "separator": "  ",
-        "color": "white",
-        "constants": ["\u001b[37m", "\u001b[38;5;16m", "\u001b[38;5;17m", "\u001b[38;5;18m"]
+        "separator": " "
     },
     "modules": [
+	"break",
+        "break",
+        "break",
+	{
+            "type": "custom",
+            "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m"
+        },
+	"break",
+	{
+            "type": "title",
+            "keyWidth": 10
+        },
         "break",
         {
-            "type": "custom",
-            "key": "╭───────────────────────────────────╮"
+            "type": "os",
+            "key": " ",
+            "keyColor": "34",  // = color4
         },
         {
             "type": "kernel",
-            "key": "│ {$2}{$1}  kernel",
-            "format": "{$2}{release>22}{$1} │"
-        },
-        {
-            "type": "command",
-            "key": "│   uptime",
-            "text": "uptime -p | cut -d ' ' -f 2-",
-            "format": "{>22} │"
-        },
-        {
-            "type": "shell",
-            "key": "│ {$2}{$1}  shell ",
-            "format": "{$2}{pretty-name>22}{$1} │"
-        },
-        {
-            "type": "command",
-            "key": "│ {$3}{$1}  mem   ",
-            "text": "free -m | awk 'NR==2{printf \"%.2f GiB / %.2f GiB\",$3/1024,$2/1024}'",
-            "format": "{$3}{>22}{$1} │"
+            "key": " ",
+            "keyColor": "34",
         },
         {
             "type": "packages",
-            "key": "│   pkgs  ",
-            "format": "{all>22} │"
+            "format": "{} (Nixpkg)",
+            "key": " ",
+            "keyColor": "34",  
         },
         {
-            "type": "command",
-            "key": "│ {$2}{$1}  user  ",
-            "text": "echo $USER",
-            "format": "{$2}{>22}{$1} │"
+            "type": "shell",
+            "key": " ",
+            "keyColor": "34", 
         },
         {
-            "type": "command",
-            "key": "│   hname ",
-            "text": "hostnamectl hostname",
-            "format": "{>22} │"
+            "type": "terminal",
+            "key": " ",
+            "keyColor": "34", 
         },
         {
-            "type": "os",
-            "key": "│ {$4}󰻀{$1}  distro",
-            "format": "{$4}{pretty-name>22}{$1} │"
+            "type": "wm",
+            "key": " ",
+            "keyColor": "34", 
         },
+        {
+            "type": "cursor",
+            "key": " ",
+            "keyColor": "34", 
+        },
+        {
+            "type": "terminalfont",
+            "key": " ",
+            "keyColor": "34", 
+        },
+        {
+            "type": "uptime",
+            "key": " ",
+            "keyColor": "34", 
+        },
+        {
+            "type": "datetime",
+            "format": "{1}-{3}-{11}",
+            "key": " ",
+            "keyColor": "34", 
+        },
+        {
+            "type": "media",
+            "key": "󰝚 ",
+            "keyColor": "34", 
+        },
+        {
+            "type": "player",
+            "key": " ",
+            "keyColor": "34", 
+        },
+        "break",
         {
             "type": "custom",
-            "key": "╰───────────────────────────────────╯"
+            "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m"
         },
-        "break"
+        "break",
+        "break",
     ]
 }
