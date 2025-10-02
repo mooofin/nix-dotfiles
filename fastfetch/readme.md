@@ -1,5 +1,15 @@
 ### A Guide to Customizing Fastfetch
 
+
+
+<img width="704" height="408" alt="screenshot-1759388263" src="https://github.com/user-attachments/assets/fc396ae8-3fd5-49e7-b6dd-111cbe54a1dd" />
+
+
+
+
+
+
+
 Tired of the same old terminal? Want to add a personal touch that showcases your setup? Fastfetch is a command-line tool that displays system information in a fast and beautiful way, and with a simple configuration file, you can transform your terminal into a personalized work of art.
 
 This guide will walk you through how to configure Fastfetch, using a real-world example to show you just how easy it is to customize.
