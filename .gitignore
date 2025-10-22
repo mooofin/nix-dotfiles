@@ -1,0 +1,28 @@
+# Nix build results
+result
+result-*
+
+# Backup files
+*.backup
+*.backup-*
+backups/
+
+# Sensitive information
+*.key
+*.pem
+secrets.yaml
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Lock files (you might want to include these, but some prefer to ignore)
+# Uncomment the line below if you want to ignore lock files
+# *.lock

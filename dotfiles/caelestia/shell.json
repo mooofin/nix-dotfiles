@@ -1,0 +1,28 @@
+{
+  "wallpapers": {
+    "path": "~/Pictures/Wallpapers"
+  },
+  "dashboard": {
+    "enabled": true,
+    "profilePicture": "~/.face"
+  },
+  "bar": {
+    "position": "top",
+    "height": 40
+  },
+  "launcher": {
+    "enabled": true
+  },
+  "quickSettings": {
+    "enabled": true
+  },
+  "notificationCenter": {
+    "enabled": true
+  },
+  "mpris": {
+    "enabled": true
+  },
+  "colorScheme": {
+    "dynamic": true
+  }
+}
