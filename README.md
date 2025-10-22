@@ -1,170 +1,56 @@
-# 🎨 Muffin's NixOS Dotfiles with Caelestia Shell
+✨ Meanwhile, here’s a recommended read: ✨  
 
-Beautiful NixOS configuration featuring the Caelestia Shell - a stunning Quickshell-based desktop environment.
+<img src="https://github.com/user-attachments/assets/1ad3ebb4-bb9d-47f4-8df5-6763038ef4da" width="350px" alt="NixOS in Production" />  
 
-## 📸 Features
+*“The NixOS handbook for professional use ONLY”*  
 
-- **Window Manager**: Hyprland with custom animations
-- **Shell**: Caelestia Shell (Quickshell)
-- **Terminal**: Kitty with transparency
-- **Editor**: Neovim
-- **Shell**: Fish
-- **Launcher**: Caelestia Launcher (replaces Rofi)
-- **System Info**: Fastfetch + Btop
-- **Display**: 1920x1080 @ 144Hz with proper 1.0 scaling
+</div>
 
-## 📁 Structure
 
-```
-nix-dotfiles/
-├── nixos/                      # NixOS system configuration
-│   ├── flake.nix              # Flake with inputs (nixpkgs, home-manager, caelestia-shell)
-│   ├── flake.lock             # Locked dependencies
-│   ├── configuration.nix      # Main system configuration
-│   ├── hardware-configuration.nix
-│   └── home-manager.nix       # Home Manager configuration
-├── dotfiles/                   # User configuration files
-│   ├── caelestia/             # Caelestia Shell config
-│   ├── nvim/                  # Neovim configuration
-│   ├── fish/                  # Fish shell
-│   ├── rofi/                  # Rofi (backup launcher)
-│   ├── kitty/                 # Kitty terminal
-│   ├── waybar/                # Waybar
-│   ├── btop/                  # System monitor
-│   └── fastfetch/             # System info
-└── README.md                   # This file
-```
 
-## 🚀 Installation
 
-### Fresh Install
+-----
 
-1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/nix-dotfiles.git ~/nix-dotfiles
-```
+<img width="1920" height="1080" alt="screenshot_1759069642" src="https://github.com/user-attachments/assets/b0acaef3-12da-4114-9763-f364805d1819" />
 
-2. Copy NixOS configuration:
-```bash
-sudo cp ~/nix-dotfiles/nixos/* /etc/nixos/
-```
 
-3. Update hardware configuration (if needed):
-```bash
-sudo nixos-generate-config --show-hardware-config > /etc/nixos/hardware-configuration.nix
-```
 
-4. Rebuild system:
-```bash
-sudo nixos-rebuild switch --flake /etc/nixos#nixos
-```
 
-5. Link dotfiles (optional, home-manager manages most):
-```bash
-ln -sf ~/nix-dotfiles/dotfiles/caelestia ~/.config/caelestia
-```
 
-## ⌨️ Keybinds
 
-### Caelestia Shell
-- **Super + D** - Launcher
-- **Super + A** - Dashboard
-- **Super + X** - Control Center (Quick Settings)
-- **Super + N** - Session Menu
-- **Super + L** - Lock Screen
-- **Super + S** - Screenshot
-- **Super + Shift + S** - Screenshot with freeze
 
-### Window Management
-- **Super + Q** - Close window
-- **Super + F** - Fullscreen
-- **Super + V** - Toggle floating
-- **Super + 1-9** - Switch workspace
-- **Super + Shift + 1-9** - Move window to workspace
 
-### Applications
-- **Super + Return** - Terminal (Kitty)
-- **Super + T** - File Manager (Nemo)
 
-### Visual Modes
-- **Super + P** - Performance Mode
-- **Super + G** - Glassy Mode
+<img width="1920" height="1080" alt="screenshot-1757228765" src="https://github.com/user-attachments/assets/587793b6-564a-4ec2-8966-e7db45d82a98" />
 
-## 🎨 Customization
+<img width="1918" height="1080" alt="screenshot-1756543731" src="https://github.com/user-attachments/assets/31743dbe-d147-4467-ad07-2829b3ce9cb6" />
 
-### Wallpapers
-Add wallpapers to `~/Pictures/Wallpapers/` and use:
-- **Super + D** to open launcher and click wallpaper picker
-- Or use `swww img ~/Pictures/Wallpapers/your-wallpaper.png`
 
-### Monitor Scaling
-Edit `~/.config/caelestia/hypr-user.conf`:
-```
-monitor = eDP-1,1920x1080@144.15,0x0,1
-```
 
-### Custom Keybinds
-Add to `~/.config/caelestia/hypr-user.conf` and run `hyprctl reload`
+<img width="1920" height="1076" alt="screenshot-1754558175" src="https://github.com/user-attachments/assets/fc3ad18b-f906-46cc-9135-b778f58283f6" />
 
-## 📦 Installed Packages
 
-### System Tools
-- caelestia-shell (with CLI)
-- hyprland
-- swww (wallpaper daemon)
-- grim, slurp, swappy (screenshots)
-- brightnessctl
-- pipewire, pamixer
 
-### Applications
-- kitty
-- nemo
-- firefox
-- spotify
-- discord
-- neovim
 
-### Fonts
-- CaskaydiaCove Nerd Font
-- Material Symbols
+<img width="3277" height="763" alt="screenshot-1753628591" src="https://github.com/user-attachments/assets/d0a7f333-db2c-41e9-bd32-258010c3de77" />
 
-## 🔧 Maintenance
 
-### Update System
-```bash
-sudo nixos-rebuild switch --flake /etc/nixos#nixos --upgrade
-```
 
-### Update Flake Inputs
-```bash
-cd /etc/nixos
-sudo nix flake update
-sudo nixos-rebuild switch --flake .#nixos
-```
 
-### Backup Current Config
-```bash
-sudo cp /etc/nixos/{flake.nix,configuration.nix,home-manager.nix} ~/nix-dotfiles/nixos/
-cp -r ~/.config/caelestia ~/nix-dotfiles/dotfiles/
-```
+<img width="3286" height="768" alt="screenshot-1753957106" src="https://github.com/user-attachments/assets/5094cf63-4235-4ba9-a04b-a61fae8a9e87" />
 
-## 📝 Notes
 
-- **Email**: siddharthqln@gmail.com
-- **User**: muffin
-- **System**: NixOS Unstable
-- **Display**: 1920x1080 @ 144Hz
+<img width="1920" height="1080" alt="screenshot-1754141258" src="https://github.com/user-attachments/assets/82ef15be-5e14-4a71-9c8d-d9c14d5e4c69" />
 
-## 🙏 Credits
 
-- [Caelestia Dots](https://github.com/caelestia-dots/shell) - Beautiful Quickshell desktop
-- [Quickshell](https://quickshell.outfoxxed.me/) - Qt-based desktop shell
-- [Hyprland](https://hyprland.org/) - Tiling window manager
-- [NixOS](https://nixos.org/) - Reproducible Linux distribution
 
-## 📄 License
 
-MIT License - Feel free to use and modify!
+<img width="1920" height="1042" alt="screenshot-1754556800" src="https://github.com/user-attachments/assets/3c1f00e9-1bb5-49c3-8186-228b787f7f53" />
 
----
-*Last updated: October 22, 2025*
+
+
+
+
+
+<img width="1881" height="1005" alt="screenshot-1753964934" src="https://github.com/user-attachments/assets/cf6e906e-f288-4131-99c0-a1aae7b79328" />
+
