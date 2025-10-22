@@ -1,7 +1,3 @@
-# 🎯 Quick Reference - Caelestia NixOS Setup
-
-## 🚀 Essential Commands
-
 ### System Management
 ```bash
 # Update system
@@ -43,7 +39,7 @@ swww img ~/Pictures/Wallpapers/wallpaper.png --transition-type fade
 | **Super + F** | Fullscreen |
 | **Super + 1-9** | Workspace 1-9 |
 
-## 📂 Important Paths
+##  Important Paths
 
 ```
 /etc/nixos/              # System config
@@ -53,7 +49,7 @@ swww img ~/Pictures/Wallpapers/wallpaper.png --transition-type fade
 ~/nix-dotfiles/          # Your dotfiles repo
 ```
 
-## 🔧 Common Tasks
+##  Common Tasks
 
 ### Add Wallpapers
 ```bash
@@ -85,7 +81,7 @@ journalctl -xe
 Super + Escape (then login again)
 ```
 
-## 📦 Package Management
+##  Package Management
 
 ```bash
 # Search packages
@@ -98,7 +94,7 @@ nix search nixpkgs <package-name>
 sudo nixos-rebuild switch --flake /etc/nixos#nixos
 ```
 
-## 🎨 Theming
+##  Theming
 
 ### Dynamic Colors from Wallpaper
 1. Set wallpaper: Super + D → wallpaper picker
@@ -107,7 +103,7 @@ sudo nixos-rebuild switch --flake /etc/nixos#nixos
 ### Custom Colors
 Edit: `~/.config/caelestia/shell.json`
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
@@ -117,11 +113,3 @@ Edit: `~/.config/caelestia/shell.json`
 | Shell not starting | Check `journalctl -xe` |
 | Wallpaper not changing | Ensure swww-daemon is running |
 
-## 📱 Contact
-
-- User: muffin
-- Email: siddharthqln@gmail.com
-- Config: ~/nix-dotfiles/
-
----
-*Keep this file handy for quick reference!*
