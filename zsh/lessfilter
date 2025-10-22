@@ -1,0 +1,68 @@
+#!/usr/bin/env zsh
+
+has_cmd() {
+  for opt in "$@"; do
+    (( $+commands[$opt] )) || return 1
+  done
+  return 0
+}
+
+mime=$(file -Lbs --mime-type "$1")
+category=${mime%%/*}
+kind=${mime##*/}
+ext=${1##*.}
+
+if [ "$kind" = json ]; then
+	if has_cmd jupyter bat && [ "$ext" = ipynb ]; then
+		jupyter nbconvert --to python --stdout "$1" | bat --color=always -plpython
+	elif has_cmd jq; then
+		jq -Cr . "$1"
+	fi
+elif [ "$kind" = vnd.sqlite3 ]; then
+	if has_cmd yes sqlite3 bat; then
+		yes .q | sqlite3 "$1" | bat --color=always -plsql
+	fi
+# https://github.com/wofr06/lesspipe/pull/107
+elif [ -d "$1" ]; then
+	if has_cmd eza; then
+		eza --no-user -hl --git --color=always --icons "$1"
+	elif has_cmd exa; then
+		exa -hl --color=always --icons "$1"
+	fi
+# https://github.com/wofr06/lesspipe/pull/110
+elif [ "$kind" = pdf ]; then
+	if has_cmd timg kitty; then
+		timg -p kitty --clear --frames=1 --threads=12 -Ug $(( FZF_PREVIEW_COLUMNS*7/4))x$(( FZF_PREVIEW_LINES * 15/8 + 3)) "$1"
+	elif has_cmd timg; then
+		timg -p i --frames=1 --threads=12 -Ug $(( FZF_PREVIEW_COLUMNS*7/4))x$(( FZF_PREVIEW_LINES * 15/8 + 3)) "$1"
+	elif has_cmd pdftotext sed; then
+		pdftotext -q "$1" - | sed "s/\f/$(printf '%*s' "${FZF_PREVIEW_COLUMNS:-80}" '' | tr ' ' '─')\\n/g"
+	fi
+# https://github.com/wofr06/lesspipe/pull/115
+elif [ "$kind" = rfc822 ]; then
+	if has_cmd bat; then
+		bat --color=always -lEmail "$1"
+	fi
+# https://github.com/wofr06/lesspipe/pull/106
+elif [ "$category" = image ]; then
+	if has_cmd kitty; then
+		kitten icat --clear --scale-up --unicode-placeholder  --stdin=no  --transfer-mode=memory --place="${FZF_PREVIEW_COLUMNS}"x"${FZF_PREVIEW_LINES}"@0x0 "$1"
+	elif [[ -e $HOME/.iterm2/imgcat ]]; then
+		"$HOME/.iterm2/imgcat" -H 100% -W 100% "$1"
+	elif has_cmd timg; then
+		timg -p i -IU --threads=12 -g $(( FZF_PREVIEW_COLUMNS*7/4))x$((FZF_PREVIEW_LINES * 15/8)) "$1"
+	elif has_cmd chafa; then
+		chafa -f symbols "$1"
+	elif has_cmd exiftool; then
+		exiftool "$1" | bat --color=always -plyaml
+	fi
+# https://github.com/wofr06/lesspipe/pull/117
+elif [ "$category" = text ]; then
+	if has_cmd bat; then
+		bat --color=always "$1"
+	elif has_cmd pygmentize; then
+		pygmentize "$1" | less
+	fi
+else
+	echo "$category"
+fi
