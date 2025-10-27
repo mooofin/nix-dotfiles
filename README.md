@@ -22,7 +22,7 @@
 </div>
 
 
-<div align="center">
+
 
 ###  System Management
 
