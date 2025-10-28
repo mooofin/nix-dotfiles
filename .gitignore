@@ -6,6 +6,7 @@ result-*
 *.backup
 *.backup-*
 backups/
+backup.sh
 
 # Sensitive information
 *.key
