@@ -13,6 +13,8 @@ A declarative, reproducible desktop environment featuring dynamic theming and mo
 [Watch Demo](https://youtu.be/ffDwGmziiCg?si=ATK48WMnEsbNwPK6) • [Report Bug](#troubleshooting) • [Request Feature](#)
 
 <img width="900" alt="Pastel Perfection Preview" src="https://github.com/user-attachments/assets/b0acaef3-12da-4114-9763-f364805d1819" />
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/dd961b32-9ae3-4532-8576-974156fce0d4" />
+
 
 ---
 
