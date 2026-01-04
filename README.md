@@ -2,9 +2,11 @@
 
 # Pastel Perfection
 
-**NixOS + Hyprland + QuickShell**
+**NixOS + Niri + Hyprland + QuickShell**
 
 A declarative, reproducible desktop environment featuring dynamic theming and modern aesthetics
+
+
 
 [![NixOS](https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=nixos&logoColor=white)](https://nixos.org)
 [![Hyprland](https://img.shields.io/badge/Hyprland-00D9FF?style=for-the-badge&logo=wayland&logoColor=white)](https://hyprland.org)
@@ -12,6 +14,7 @@ A declarative, reproducible desktop environment featuring dynamic theming and mo
 
 [Watch Demo](https://youtu.be/ffDwGmziiCg?si=ATK48WMnEsbNwPK6) • [Report Bug](#troubleshooting) • [Request Feature](#)
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d4ab9ebf-a514-4b3f-96a4-8b57e9ba907d" />
 <img width="900" alt="Pastel Perfection Preview" src="https://github.com/user-attachments/assets/b0acaef3-12da-4114-9763-f364805d1819" />
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/dd961b32-9ae3-4532-8576-974156fce0d4" />
 
