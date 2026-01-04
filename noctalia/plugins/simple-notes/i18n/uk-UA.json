@@ -1,0 +1,32 @@
+{
+  "bar_widget": {
+    "tooltip": "Прості нотатки"
+  },
+  "panel": {
+    "confirm": {
+      "delete_message": "Ви впевнені, що хочете видалити цю нотатку?",
+      "delete_title": "Видалити нотатку?"
+    },
+    "editor": {
+      "cancel_button": "Скасувати",
+      "content_placeholder": "Напишіть тут свої думки...",
+      "delete_button": "Видалити",
+      "save_button": "Зберегти",
+      "title_placeholder": "Назва нотатки"
+    },
+    "header": {
+      "add_button": "Нова нотатка",
+      "title": "Примітки"
+    },
+    "list": {
+      "empty_message": "Поки що немає нотаток. Створіть!",
+      "last_modified": "Останнє редагування:"
+    }
+  },
+  "settings": {
+    "show_count": {
+      "description": "Показати кількість нот у віджеті такту",
+      "label": "Показати кількість нотаток"
+    }
+  }
+}

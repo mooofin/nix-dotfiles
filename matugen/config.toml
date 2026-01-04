@@ -1,0 +1,7 @@
+[config]
+reload_apps = true
+reload_apps_command = ""
+
+[templates.alacritty]
+input_path = "~/.config/matugen/templates/alacritty.toml"
+output_path = "~/.config/alacritty/themes/noctalia.toml"

@@ -1,0 +1,68 @@
+[colors.primary]
+background = '{{ colors.background.default.hex }}'
+foreground = '{{ colors.on_background.default.hex }}'
+
+[colors.cursor]
+text = '{{ colors.on_background.default.hex }}'
+cursor = '{{ colors.primary.default.hex }}'
+
+[colors.vi_mode_cursor]
+text = '{{ colors.background.default.hex }}'
+cursor = '{{ colors.primary_fixed_dim.default.hex }}'
+
+[colors.search.matches]
+foreground = '{{ colors.on_secondary_container.default.hex }}'
+background = '{{ colors.secondary.default.hex }}'
+
+[colors.search.focused_match]
+foreground = '{{ colors.on_primary_container.default.hex }}'
+background = '{{ colors.primary.default.hex }}'
+
+[colors.footer_bar]
+foreground = '{{ colors.background.default.hex }}'
+background = '{{ colors.on_background.default.hex }}'
+
+[colors.hints.start]
+foreground = '{{ colors.on_secondary.default.hex }}'
+background = '{{ colors.secondary.default.hex }}'
+
+[colors.hints.end]
+foreground = '{{ colors.on_secondary.default.hex }}'
+background = '{{ colors.secondary.default.hex }}'
+
+[colors.selection]
+text = '{{ colors.background.default.hex }}'
+background = '{{ colors.primary.default.hex }}'
+
+
+[colors.normal]
+black = '{{ colors.surface_container_lowest.default.hex }}'
+red = '{{ colors.error.default.hex }}'
+green = '{{ colors.tertiary.default.hex }}'
+yellow = '{{ colors.primary_fixed_dim.default.hex }}'
+blue = '{{ colors.secondary.default.hex }}'
+magenta = '{{ colors.primary.default.hex }}'
+cyan = '{{ colors.secondary_fixed_dim.default.hex }}'
+white = '{{ colors.on_background.default.hex }}'
+
+
+[colors.bright]
+black = '{{ colors.surface_container_high.default.hex }}'
+red = '{{ colors.error.default.hex }}'
+green = '{{ colors.tertiary_fixed_dim.default.hex }}'
+yellow = '{{ colors.primary.default.hex }}'
+blue = '{{ colors.secondary_fixed.default.hex }}'
+magenta = '{{ colors.primary_fixed.default.hex }}'
+cyan = '{{ colors.tertiary.default.hex }}'
+white = '{{ colors.on_background.default.hex }}'
+
+
+[colors.dim]
+black = '{{ colors.surface_container.default.hex }}'
+red = '{{ colors.error_container.default.hex }}'
+green = '{{ colors.tertiary_container.default.hex }}'
+yellow = '{{ colors.primary_container.default.hex }}'
+blue = '{{ colors.secondary_container.default.hex }}'
+magenta = '{{ colors.on_primary_fixed_variant.default.hex }}'
+cyan = '{{ colors.on_tertiary_fixed_variant.default.hex }}'
+white = '{{ colors.outline.default.hex }}'
